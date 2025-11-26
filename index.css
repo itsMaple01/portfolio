@@ -96,13 +96,13 @@ body.dark section {
 h2 {
     color: #333;
     margin-bottom: 15px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #666;
     padding-bottom: 5px;
 }
 
 body.dark h2 {
     color: #f0f0f0;
-    border-bottom-color: #f0f0f0;
+    border-bottom-color: #666;
 }
 
 p {
