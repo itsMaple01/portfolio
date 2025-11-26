@@ -42,3 +42,27 @@ a:hover {
 .education h2 {
   color: #4CAF50;
 }
+
+body.dark {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+body.dark h1,
+body.dark h2 {
+  color: #f9f9f9;
+}
+
+body.dark p,
+body.dark li {
+  color: #ddd;
+}
+
+body.dark .education {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark a {
+  color: #66ccff;
+}
