@@ -1,84 +1,123 @@
 body {
-  margin: 20px;
-  background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
 }
 
 h1, h2 {
-  color: #333;
+    color: #333;
 }
 
 p, li {
-  color: #555;
+    color: #555;
+    line-height: 1.6;
 }
 
 ul {
-  list-style-type: square;
-  padding-left: 20px;
+    list-style-type: square;
+    padding-left: 20px;
 }
 
 hr {
-  margin-top: 30px;
-  border: none;
-  border-top: 1px solid #ccc;
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ccc;
 }
 
 a {
-  color: #0066cc;
-  text-decoration: none;
+    color: #0066cc;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #777;
 }
 
 .profile {
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 4rem; 
+    width: 100%;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #ccc;
+}
+
+.main-content {
+    align-self: flex-start;
+    width: 100%;
 }
 
 .education,
 .projects {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 1rem;
-  background-color: transparent;
-  border: none;
+    text-align: left;
+    margin: 1rem 0;
+    max-width: 700px; 
+    padding: 1rem 0;
 }
 
 .education h2,
 .projects h2 {
-  color: #4CAF50;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 0;
 }
 
+
 body.dark {
-  background-color: #121212;
-  color: #f9f9f9;
+    background-color: #121212;
+    color: #f9f9f9;
 }
 
 body.dark h1,
 body.dark h2 {
-  color: #f9f9f9;
+    color: #f9f9f9;
 }
 
 body.dark p,
 body.dark li {
-  color: #ddd;
-}
-
-body.dark .education {
-  background-color: transparent;
-  border: none;
+    color: #ddd;
 }
 
 body.dark a {
-  color: #66ccff;
+    color: #66ccff;
+}
+
+body.dark .profile-pic {
+    border-color: #555;
+}
+
+body.dark hr {
+    border-top: 1px solid #333;
+}
+
+body.dark .education h2,
+body.dark .projects h2 {
+    color: #8BC34A;
+    border-bottom: 2px solid #8BC34A;
 }
