@@ -1,7 +1,7 @@
 function toggleTheme() {
     document.body.classList.toggle("dark");
     const themeBtn = document.querySelector(".theme-btn");
-    
+
     if (document.body.classList.contains("dark")) {
         themeBtn.textContent = "☀️ Light Mode";
         localStorage.setItem("theme", "dark");
@@ -11,15 +11,19 @@ function toggleTheme() {
     }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+function initializeTheme() {
     const savedTheme = localStorage.getItem("theme");
     const themeBtn = document.querySelector(".theme-btn");
     
+    themeBtn.textContent = "🌙 Dark Mode"; 
+
     if (savedTheme === "dark") {
         document.body.classList.add("dark");
         themeBtn.textContent = "☀️ Light Mode";
     }
-});
+}
+
+window.addEventListener("DOMContentLoaded", initializeTheme);
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
