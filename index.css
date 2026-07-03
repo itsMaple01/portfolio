@@ -603,7 +603,7 @@ body.light .tech-icon img.invert-dark {
 }
 
 .featured-project-media.portrait {
-    width: 160px;
+    width: 130px;
 }
 
 .featured-project-media.portrait img {
@@ -611,11 +611,12 @@ body.light .tech-icon img.invert-dark {
 }
 
 .featured-project-media.landscape {
-    width: 260px;
+    width: 320px;
+    align-self: center;
 }
 
 .featured-project-media.landscape img {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;
 }
 
 .featured-tag {
@@ -748,11 +749,11 @@ body.light .tech-icon img.invert-dark {
     }
     .featured-project-media.portrait {
         width: 100%;
-        max-width: 200px;
+        max-width: 160px;
     }
     .featured-project-media.landscape {
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
     }
 }
 
