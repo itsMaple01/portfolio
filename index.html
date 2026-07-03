@@ -4,106 +4,357 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Hudes | Portfolio</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="https://github.com/itsMaple01" target="_blank" style="text-decoration: none; color: inherit;">
-                <h1>Jan Hudes</h1>
-            </a>
-            <p class="tagline">Aspiring Developer & Creative Problem Solver</p>
-            <button onclick="toggleTheme()" class="theme-btn">🌙 Dark Mode</button>
-        </header>
 
-        <section class="profile">
-            <img src="alden.jpg" alt="Jan Hudes" class="profile-pic">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hi! I'm a 2nd-year Computer Science student with a passion for AI, logic, and creative problem-solving.</p>
+    <nav class="site-nav">
+        <a href="https://github.com/itsMaple01" target="_blank" class="brand-link">
+            <span class="brand-mark">//</span>
+            <span class="brand-name">jan hudes</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#connect">Connect</a></li>
+        </ul>
+        <label class="theme-switch">
+            <input type="checkbox" onchange="toggleTheme()" aria-label="Toggle light and dark mode">
+            <span class="track"></span>
+            <span class="thumb">☾</span>
+        </label>
+    </nav>
+
+    <div class="container">
+
+        <section class="hero">
+            <div>
+                <div class="status-line">
+                    <span class="status-dot"></span>
+                    <span>system online</span>
+                </div>
+                <h1>Building things at the intersection of software, hardware, and ML.</h1>
+                <p class="role">2nd-Year Computer Science — Davao, PH</p>
+                <p class="hero-desc">I'm still figuring a lot of this out, but I like building systems that touch more than one layer at once — an app, a backend, a device, a model — and getting them to talk to each other.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#connect" class="btn btn-ghost">Connect</a>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo-inner">
+                    <img src="alden.png" alt="Jan Hudes" class="profile-pic">
+                </div>
+            </div>
         </section>
 
-        <main>
-            <section class="about">
-                <h2>About Me</h2>
-                <p>I'm Jan Hudes, currently exploring the world of technology and development. I'm still figuring things out, but I enjoy learning and exploring new ideas — even when I don't fully understand them yet.</p>
-                <p>Right now, I'm curious about how tech works and how I can use it to build cool and useful things.</p>
+        <main class="trace-rail">
+
+            <section class="panel" id="about">
+                <h2>About</h2>
+                <p>I'm exploring the world of technology and development one project at a time — still figuring things out, but I enjoy learning ideas even before I fully understand them. Right now I'm curious about how tech works underneath, and how I can use that to build things that are actually useful.</p>
             </section>
 
-            <section class="achievements">
+            <section class="panel">
                 <h2>Achievements</h2>
-                <div class="achievement-item">
-                    <strong>Status:</strong> Nabubuhay pa din
-                </div>
-                <div class="achievement-item">
-                    <strong>Education:</strong> 2nd Year Computer Science
+                <div class="status-panel">
+                    <div class="status-row"><span>status</span><span>online — nabubuhay pa din</span></div>
+                    <div class="status-row"><span>education</span><span>BS Computer Science, Year 2</span></div>
+                    <div class="status-row"><span>location</span><span>Davao, Philippines</span></div>
                 </div>
             </section>
 
-            <section class="projects">
+            <section class="panel" id="stack">
+                <h2>Tech Stack</h2>
+
+                <div class="stack-group">
+                    <div class="stack-label">Languages</div>
+                    <div class="tech-grid">
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" loading="lazy"></div>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" loading="lazy"></div>
+                            <span class="tech-name">TypeScript</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" loading="lazy"></div>
+                            <span class="tech-name">Python</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="" loading="lazy"></div>
+                            <span class="tech-name">C++</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">C#</span></div>
+                            <span class="tech-name">C#</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">JAVA</span></div>
+                            <span class="tech-name">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-label">Mobile &amp; Frontend</div>
+                    <div class="tech-grid">
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/expo/000020" alt="" loading="lazy"></div>
+                            <span class="tech-name">Expo</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" loading="lazy"></div>
+                            <span class="tech-name">React Native</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" loading="lazy"></div>
+                            <span class="tech-name">HTML5</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">CSS</span></div>
+                            <span class="tech-name">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-label">Backend &amp; Data</div>
+                    <div class="tech-grid">
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="" loading="lazy"></div>
+                            <span class="tech-name">Node.js</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/express/000000" alt="" loading="lazy"></div>
+                            <span class="tech-name">Express</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" loading="lazy"></div>
+                            <span class="tech-name">PostgreSQL</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" loading="lazy"></div>
+                            <span class="tech-name">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-label">IoT &amp; ML</div>
+                    <div class="tech-grid">
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/arduino/00979D" alt="" loading="lazy"></div>
+                            <span class="tech-name">ESP32 / Arduino</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">MQTT</span></div>
+                            <span class="tech-name">MQTT</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">XGB</span></div>
+                            <span class="tech-name">XGBoost</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">ONNX</span></div>
+                            <span class="tech-name">ONNX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-label">Deployment &amp; Tools</div>
+                    <div class="tech-grid">
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/railway/0B0D0E" alt="" loading="lazy"></div>
+                            <span class="tech-name">Railway</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/vercel/000000" alt="" loading="lazy"></div>
+                            <span class="tech-name">Vercel</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/git/F05032" alt="" loading="lazy"></div>
+                            <span class="tech-name">Git</span>
+                        </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/github/000000" alt="" loading="lazy"></div>
+                            <span class="tech-name">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" id="projects">
                 <h2>Projects</h2>
+
+                <div class="projects-subhead">Recent / Final Project</div>
+                <div class="featured-project">
+                    <div class="featured-project-header">
+                        <div>
+                            <div class="featured-tag"><span class="status-dot"></span>Capstone — HCI final project</div>
+                            <h3>GabayRa</h3>
+                            <p class="project-role">Your Medication Companion — React Native app + IoT pillbox + risk model</p>
+                        </div>
+                    </div>
+                    <p class="featured-desc">A medication adherence system built for families managing multiple patients at once. The React Native app pairs with an IoT pillbox over MQTT to log doses in real time, tracks per-patient compliance, and uses an XGBoost model to flag missed-dose risk before it becomes a pattern.</p>
+                    <div class="featured-links">
+                        <a href="https://expo.dev/accounts/miskamiskas-organization/projects/gabayra/builds/ffd8f2e5-f4ec-4675-a5f6-e7c7391eb7a3" target="_blank" class="btn btn-primary">Download APK</a>
+                        <a href="https://github.com/itsMaple01/pillpal-app" target="_blank" class="btn btn-ghost">View Repository</a>
+                    </div>
+                    <div class="gallery-label">Interface screenshots</div>
+                    <div class="screenshot-gallery">
+                        <a href="assets/gabayra/01-splash.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/01-splash.png" alt="GabayRa splash screen" loading="lazy">
+                        </a>
+                        <a href="assets/gabayra/02-login.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/02-login.png" alt="GabayRa login and sign up screen" loading="lazy">
+                        </a>
+                        <a href="assets/gabayra/03-dashboard.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/03-dashboard.png" alt="GabayRa family care dashboard" loading="lazy">
+                        </a>
+                        <a href="assets/gabayra/04-schedule.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/04-schedule.png" alt="GabayRa medication schedule view" loading="lazy">
+                        </a>
+                        <a href="assets/gabayra/05-patients.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/05-patients.png" alt="GabayRa linked patients overview" loading="lazy">
+                        </a>
+                        <a href="assets/gabayra/06-linked-patients.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/06-linked-patients.png" alt="GabayRa linked patients management" loading="lazy">
+                        </a>
+                        <a href="assets/gabayra/07-statistics.png" target="_blank" class="screenshot-frame">
+                            <img src="assets/gabayra/07-statistics.png" alt="GabayRa medication statistics dashboard" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="projects-subhead">Other Projects</div>
                 <div class="project-grid">
                     <div class="project-card">
                         <h3>JournAl.ai</h3>
-                        <p>AI-powered journaling website(still on development)</p>
+                        <p>AI-powered journaling website (in development).</p>
                     </div>
                     <div class="project-card">
                         <h3>Psychological Horror Game</h3>
-                        <p>Simple text-based psychological horror game(unfinished)</p>
+                        <p>Text-based psychological horror game (unfinished).</p>
                     </div>
                     <div class="project-card">
                         <h3>GreenSense</h3>
-                        <p>Environmental awareness project</p>
+                        <p>Environmental awareness project.</p>
                         <a href="https://itsmaple01.github.io/GreenSense/" target="_blank" class="project-link">Visit Project →</a>
                     </div>
                     <div class="project-card">
-                       <h3>Machine Problem M1-FA3</h3>
-                       <p>Portfolio-linked machine problem project</p>
-                       <a href="https://itsmaple01.github.io/Machine_Problem_Hudes_M1-FA3/" target="_blank" class="project-link">Visit Project →</a>
+                        <h3>Machine Problem M1-FA3</h3>
+                        <p>Portfolio-linked machine problem project.</p>
+                        <a href="https://itsmaple01.github.io/Machine_Problem_Hudes_M1-FA3/" target="_blank" class="project-link">Visit Project →</a>
                     </div>
                     <div class="project-card">
-                        <h3>PART3_SUMMATIVE_Recipe Explorer</h3>
-                        <p>Interactive recipe discovery application</p>
+                        <h3>Recipe Explorer</h3>
+                        <p>Interactive recipe discovery application.</p>
                         <a href="https://jans-recipe-explorer.vercel.app" target="_blank" class="project-link">Visit Project →</a>
                     </div>
-                    <div class="project-card">
-                        <h3>PillPall</h3>
-                        <p>Pill tracking and reminder website</p>
-                        <a href="https://pillpall-project.vercel.app" target="_blank" class="project-link">Visit Project →</a>
-                    </div>
+                    <!-- Add more <div class="project-card">...</div> blocks here as new projects ship -->
                 </div>
             </section>
 
-            <section class="experience">
-                <h2>Past Experiences</h2>
-                <p>I've worked with HTML and CSS before and feel comfortable using them to build and style websites. I've joined coding activities and team projects that helped me improve those skills. I'm still new to JavaScript, but I'm learning how to use it to make my sites more interactive.</p>
-                <p>Since entering college, I've also gained knowledge in other programming languages like C++, C#, and Java. These have helped me understand more about how software works and how different languages are used in real-world projects.</p>
+            <section class="panel experience">
+                <h2>Past Experience</h2>
+                <p>Comfortable with HTML and CSS from building and styling several sites, plus a growing handle on JavaScript for making things interactive. Since starting college, I've picked up C++, C#, and Java — which helped me understand how different languages get used in real-world projects, not just in class.</p>
             </section>
 
-            <section class="socials">
-                <h2>Connect With Me</h2>
-                <div class="social-links">
-                    <a href="https://github.com/itsMaple01" target="_blank" class="social-btn github">
-                        <span class="icon">🐙</span>
-                        <span>GitHub</span>
+            <section class="panel" id="certificates">
+                <h2>Certificates</h2>
+                <div class="cert-grid">
+                    <a href="assets/certificates/ccis-innovision-2026.png" target="_blank" class="cert-card">
+                        <div class="cert-thumb">
+                            <img src="assets/certificates/ccis-innovision-2026.png" alt="CCIS InnoVision 2026 Certificate of Participation" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <div class="cert-issuer">College of Computer and Information Science</div>
+                            <h3>CCIS InnoVision 2026 — Certificate of Participation</h3>
+                            <p class="cert-date">College Research, Innovation & Project Colloquium · June 20, 2026</p>
+                        </div>
                     </a>
-                    <a href="#" class="social-btn linkedin">
-                        <span class="icon">💼</span>
-                        <span>LinkedIn</span>
+                    <a href="assets/certificates/coursera-input-and-interaction.png" target="_blank" class="cert-card">
+                        <div class="cert-thumb">
+                            <img src="assets/certificates/coursera-input-and-interaction.png" alt="Coursera certificate — Input and Interaction" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <div class="cert-issuer">UC San Diego · via Coursera</div>
+                            <h3>Input and Interaction</h3>
+                            <p class="cert-date">Course Certificate · 2026</p>
+                        </div>
                     </a>
-                    <a href="#" class="social-btn twitter">
-                        <span class="icon">🐦</span>
-                        <span>Twitter</span>
+                    <a href="assets/certificates/coursera-intro-to-ux-design.png" target="_blank" class="cert-card">
+                        <div class="cert-thumb">
+                            <img src="assets/certificates/coursera-intro-to-ux-design.png" alt="Coursera certificate — Introduction to User Experience Design" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <div class="cert-issuer">Georgia Institute of Technology · via Coursera</div>
+                            <h3>Introduction to User Experience Design</h3>
+                            <p class="cert-date">Course Certificate · 2026</p>
+                        </div>
                     </a>
-                    <a href="#" class="social-btn email">
-                        <span class="icon">📧</span>
-                        <span>Email</span>
+                    <a href="assets/certificates/ccis-eventflow-verification.png" target="_blank" class="cert-card">
+                        <div class="cert-thumb">
+                            <img src="assets/certificates/ccis-eventflow-verification.png" alt="CCIS InnoVision 2026 EventFlow verified attendance certificate" loading="lazy">
+                        </div>
+                        <div class="cert-body">
+                            <div class="cert-issuer">EventFlow · Verified Certificate</div>
+                            <h3>CCIS InnoVision 2026 — Attendance Verification</h3>
+                            <p class="cert-date">Verification ID EF-CERT-2026-1340134 · June 20, 2026</p>
+                        </div>
+                    </a>
+                    <!-- Add more <a class="cert-card">...</a> blocks here as new certificates come in -->
+                </div>
+            </section>
+
+            <section class="panel" id="connect">
+                <h2>Connect</h2>
+                <div class="connect-grid">
+                    <a href="https://github.com/itsMaple01" target="_blank" class="connect-tile">
+                        <div class="connect-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/github/000000" alt="" loading="lazy"></div>
+                        <span class="connect-name">GitHub</span>
+                    </a>
+                    <a href="#" class="connect-tile">
+                        <div class="connect-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <line x1="7.5" y1="10" x2="7.5" y2="17"></line>
+                                <circle cx="7.5" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle>
+                                <path d="M11.5 17v-4.2c0-1.6 1-2.6 2.4-2.6 1.3 0 2.1 1 2.1 2.6V17"></path>
+                                <line x1="11.5" y1="10" x2="11.5" y2="17"></line>
+                            </svg>
+                        </div>
+                        <span class="connect-name">LinkedIn</span>
+                    </a>
+                    <a href="#" class="connect-tile">
+                        <div class="connect-icon"><img class="invert-dark" src="https://cdn.simpleicons.org/x/000000" alt="" loading="lazy"></div>
+                        <span class="connect-name">Twitter / X</span>
+                    </a>
+                    <a href="#" class="connect-tile">
+                        <div class="connect-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <path d="M3 7l9 6 9-6"></path>
+                            </svg>
+                        </div>
+                        <span class="connect-name">Email</span>
                     </a>
                 </div>
             </section>
+
         </main>
 
         <footer>
-            <p>© 2024 Jan Hudes. Built with passion and curiosity.</p>
+            <p>© 2026 Jan Hudes. Built with passion and curiosity.</p>
         </footer>
     </div>
     <script src="index.js"></script>
