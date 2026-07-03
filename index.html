@@ -40,7 +40,7 @@
                     <span>system online</span>
                 </div>
                 <h1>Building things at the intersection of software, hardware, and ML.</h1>
-                <p class="role">2nd-Year Computer Science — Davao, PH</p>
+                <p class="role">BS Computer Science Student — Mapúa Malayan Colleges Mindanao</p>
                 <p class="hero-desc">I'm still figuring a lot of this out, but I like building systems that touch more than one layer at once — an app, a backend, a device, a model — and getting them to talk to each other.</p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -59,15 +59,6 @@
             <section class="panel" id="about">
                 <h2>About</h2>
                 <p>I'm exploring the world of technology and development one project at a time — still figuring things out, but I enjoy learning ideas even before I fully understand them. Right now I'm curious about how tech works underneath, and how I can use that to build things that are actually useful.</p>
-            </section>
-
-            <section class="panel">
-                <h2>Achievements</h2>
-                <div class="status-panel">
-                    <div class="status-row"><span>status</span><span>online — nabubuhay pa din</span></div>
-                    <div class="status-row"><span>education</span><span>BS Computer Science, Year 2</span></div>
-                    <div class="status-row"><span>location</span><span>Davao, Philippines</span></div>
-                </div>
             </section>
 
             <section class="panel" id="stack">
@@ -144,6 +135,10 @@
                             <div class="tech-icon"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" loading="lazy"></div>
                             <span class="tech-name">Firebase</span>
                         </div>
+                        <div class="tech-tile">
+                            <div class="tech-icon"><span class="tech-fallback">NEON</span></div>
+                            <span class="tech-name">Neon</span>
+                        </div>
                     </div>
                 </div>
 
@@ -181,6 +176,10 @@
                             <span class="tech-name">Vercel</span>
                         </div>
                         <div class="tech-tile">
+                            <div class="tech-icon"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" loading="lazy"></div>
+                            <span class="tech-name">Docker</span>
+                        </div>
+                        <div class="tech-tile">
                             <div class="tech-icon"><img src="https://cdn.simpleicons.org/git/F05032" alt="" loading="lazy"></div>
                             <span class="tech-name">Git</span>
                         </div>
@@ -196,42 +195,70 @@
                 <h2>Projects</h2>
 
                 <div class="projects-subhead">Recent / Final Project</div>
+
                 <div class="featured-project">
-                    <div class="featured-project-header">
-                        <div>
+                    <div class="featured-project-body">
+                        <div class="featured-project-text">
                             <div class="featured-tag"><span class="status-dot"></span>Capstone — HCI final project</div>
                             <h3>GabayRa</h3>
                             <p class="project-role">Your Medication Companion — React Native app + IoT pillbox + risk model</p>
+                            <p class="featured-desc">A medication adherence system built for families managing multiple patients at once. The React Native app pairs with an IoT pillbox over MQTT to log doses in real time, tracks per-patient compliance, and uses an XGBoost model to flag missed-dose risk before it becomes a pattern.</p>
+                            <div class="featured-links">
+                                <a href="https://expo.dev/accounts/miskamiskas-organization/projects/gabayra/builds/ffd8f2e5-f4ec-4675-a5f6-e7c7391eb7a3" target="_blank" class="btn btn-primary">Download APK</a>
+                                <a href="https://github.com/itsMaple01/pillpal-app" target="_blank" class="btn btn-ghost">Source Code</a>
+                            </div>
+                            <details class="project-details-toggle">
+                                <summary>View screenshots</summary>
+                                <div class="screenshot-gallery">
+                                    <a href="assets/gabayra/01-splash.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/01-splash.png" alt="GabayRa splash screen" loading="lazy">
+                                    </a>
+                                    <a href="assets/gabayra/02-login.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/02-login.png" alt="GabayRa login and sign up screen" loading="lazy">
+                                    </a>
+                                    <a href="assets/gabayra/03-dashboard.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/03-dashboard.png" alt="GabayRa family care dashboard" loading="lazy">
+                                    </a>
+                                    <a href="assets/gabayra/04-schedule.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/04-schedule.png" alt="GabayRa medication schedule view" loading="lazy">
+                                    </a>
+                                    <a href="assets/gabayra/05-patients.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/05-patients.png" alt="GabayRa linked patients overview" loading="lazy">
+                                    </a>
+                                    <a href="assets/gabayra/06-linked-patients.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/06-linked-patients.png" alt="GabayRa linked patients management" loading="lazy">
+                                    </a>
+                                    <a href="assets/gabayra/07-statistics.png" target="_blank" class="screenshot-frame">
+                                        <img src="assets/gabayra/07-statistics.png" alt="GabayRa medication statistics dashboard" loading="lazy">
+                                    </a>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="featured-project-media portrait">
+                            <a href="assets/gabayra/01-splash.png" target="_blank">
+                                <img src="assets/gabayra/01-splash.png" alt="GabayRa splash screen preview" loading="lazy">
+                            </a>
                         </div>
                     </div>
-                    <p class="featured-desc">A medication adherence system built for families managing multiple patients at once. The React Native app pairs with an IoT pillbox over MQTT to log doses in real time, tracks per-patient compliance, and uses an XGBoost model to flag missed-dose risk before it becomes a pattern.</p>
-                    <div class="featured-links">
-                        <a href="https://expo.dev/accounts/miskamiskas-organization/projects/gabayra/builds/ffd8f2e5-f4ec-4675-a5f6-e7c7391eb7a3" target="_blank" class="btn btn-primary">Download APK</a>
-                        <a href="https://github.com/itsMaple01/pillpal-app" target="_blank" class="btn btn-ghost">View Repository</a>
-                    </div>
-                    <div class="gallery-label">Interface screenshots</div>
-                    <div class="screenshot-gallery">
-                        <a href="assets/gabayra/01-splash.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/01-splash.png" alt="GabayRa splash screen" loading="lazy">
-                        </a>
-                        <a href="assets/gabayra/02-login.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/02-login.png" alt="GabayRa login and sign up screen" loading="lazy">
-                        </a>
-                        <a href="assets/gabayra/03-dashboard.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/03-dashboard.png" alt="GabayRa family care dashboard" loading="lazy">
-                        </a>
-                        <a href="assets/gabayra/04-schedule.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/04-schedule.png" alt="GabayRa medication schedule view" loading="lazy">
-                        </a>
-                        <a href="assets/gabayra/05-patients.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/05-patients.png" alt="GabayRa linked patients overview" loading="lazy">
-                        </a>
-                        <a href="assets/gabayra/06-linked-patients.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/06-linked-patients.png" alt="GabayRa linked patients management" loading="lazy">
-                        </a>
-                        <a href="assets/gabayra/07-statistics.png" target="_blank" class="screenshot-frame">
-                            <img src="assets/gabayra/07-statistics.png" alt="GabayRa medication statistics dashboard" loading="lazy">
-                        </a>
+                </div>
+
+                <div class="featured-project">
+                    <div class="featured-project-body">
+                        <div class="featured-project-text">
+                            <div class="featured-tag"><span class="status-dot"></span>Group project — booking &amp; admin platform</div>
+                            <h3>Kelsey's Homestay</h3>
+                            <p class="project-role">Never feel the homesickness again — vacation rental booking + admin management system</p>
+                            <p class="featured-desc">A booking platform for a Davao City homestay, paired with an admin dashboard for day-to-day operations — employee records, payroll periods, DTR (daily time record) tracking, and billable charges, alongside listings, bookings, and calendar management for guests.</p>
+                            <div class="featured-links">
+                                <a href="https://www.kelseyshomestay.com/" target="_blank" class="btn btn-primary">View Project</a>
+                                <a href="https://github.com/kelsey-developers" target="_blank" class="btn btn-ghost">Source Code</a>
+                            </div>
+                        </div>
+                        <div class="featured-project-media landscape">
+                            <a href="assets/Kelsey's/payroll.png" target="_blank">
+                                <img src="assets/Kelsey's/payroll.png" alt="Kelsey's Homestay admin dashboard preview" loading="lazy">
+                            </a>
+                        </div>
                     </div>
                 </div>
 

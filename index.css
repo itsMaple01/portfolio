@@ -318,31 +318,36 @@ button:focus-visible {
 /* Photo frame — component-footprint style, not a generic avatar */
 .photo-frame {
     position: relative;
-    padding: 28px;
+    padding: 0;
 }
-
-.photo-frame::before,
-.photo-frame::after,
-.photo-inner::before,
-.photo-inner::after {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border-color: var(--accent-trace);
-}
-
-.photo-frame::before { top: 0; left: 0; border-top: 2px solid; border-left: 2px solid; }
-.photo-frame::after { top: 0; right: 0; border-top: 2px solid; border-right: 2px solid; }
-.photo-inner::before { bottom: 0; left: 0; border-bottom: 2px solid; border-left: 2px solid; }
-.photo-inner::after { bottom: 0; right: 0; border-bottom: 2px solid; border-right: 2px solid; }
 
 .photo-inner {
     position: relative;
-    padding: 8px;
-    background:
+    padding: 10px;
+    background-color: var(--surface-inset);
+    background-image:
         radial-gradient(circle at 50% 42%, var(--node-glow) 0%, transparent 65%),
-        var(--surface-inset);
+        linear-gradient(to right, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to bottom, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to left, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to bottom, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to left, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to top, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to right, var(--accent-trace) 2px, transparent 2px),
+        linear-gradient(to top, var(--accent-trace) 2px, transparent 2px);
+    background-size:
+        auto,
+        18px 2px, 2px 18px,
+        18px 2px, 2px 18px,
+        18px 2px, 2px 18px,
+        18px 2px, 2px 18px;
+    background-position:
+        50% 42%,
+        top left, top left,
+        top right, top right,
+        bottom right, bottom right,
+        bottom left, bottom left;
+    background-repeat: no-repeat;
     border: 1px solid var(--border);
 }
 
@@ -403,36 +408,6 @@ section.panel h2 {
     margin-bottom: 18px;
     padding-bottom: 0;
     border-bottom: none;
-}
-
-/* ---------- Status / achievements panel ---------- */
-.status-panel {
-    background: var(--surface-inset);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 18px 20px;
-    font-family: var(--ff-mono);
-    font-size: 0.85rem;
-}
-
-.status-row {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 12px;
-    padding: 6px 0;
-    color: var(--text-secondary);
-}
-
-.status-row:not(:last-child) {
-    border-bottom: 1px dashed var(--border);
-}
-
-.status-row span:first-child {
-    color: var(--accent-trace);
-}
-
-.status-row span:last-child {
-    color: var(--text-primary);
 }
 
 /* ---------- Tech stack (icon tiles) ---------- */
@@ -587,16 +562,60 @@ body.light .tech-icon img.invert-dark {
     border: 1px solid var(--border);
     border-radius: 6px;
     padding: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
-.featured-project-header {
+.featured-project:last-of-type { margin-bottom: 8px; }
+
+.featured-project-body {
     display: flex;
+    gap: 24px;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+}
+
+.featured-project-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-project-media {
+    flex-shrink: 0;
+}
+
+.featured-project-media a {
+    display: block;
+    line-height: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-project-media a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px var(--shadow);
+}
+
+.featured-project-media img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+    background: var(--surface-inset);
+}
+
+.featured-project-media.portrait {
+    width: 160px;
+}
+
+.featured-project-media.portrait img {
+    aspect-ratio: 9 / 19.5;
+}
+
+.featured-project-media.landscape {
+    width: 260px;
+}
+
+.featured-project-media.landscape img {
+    aspect-ratio: 16 / 9;
 }
 
 .featured-tag {
@@ -642,7 +661,43 @@ body.light .tech-icon img.invert-dark {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+}
+
+.project-details-toggle {
+    margin-top: 16px;
+    font-family: var(--ff-mono);
+    font-size: 0.78rem;
+}
+
+.project-details-toggle summary {
+    cursor: pointer;
+    color: var(--accent-copper);
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.project-details-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-details-toggle summary::before {
+    content: "▸";
+    transition: transform 0.2s ease;
+}
+
+.project-details-toggle[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.project-details-toggle summary:hover {
+    color: var(--accent-copper-strong);
+}
+
+.project-details-toggle .screenshot-gallery {
+    margin-top: 14px;
 }
 
 .gallery-label {
@@ -681,6 +736,24 @@ body.light .tech-icon img.invert-dark {
     aspect-ratio: 9 / 19.5;
     object-fit: cover;
     display: block;
+}
+
+.screenshot-frame.wide img {
+    aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 720px) {
+    .featured-project-body {
+        flex-direction: column;
+    }
+    .featured-project-media.portrait {
+        width: 100%;
+        max-width: 200px;
+    }
+    .featured-project-media.landscape {
+        width: 100%;
+        max-width: 320px;
+    }
 }
 
 /* ---------- Certificates ---------- */
@@ -831,7 +904,6 @@ footer {
     }
     .photo-frame { max-width: 220px; margin: 0 auto; }
     .hero h1 { font-size: 2rem; }
-    .status-row { grid-template-columns: 90px 1fr; }
 }
 
 @media (max-width: 480px) {
